@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {ReactiveFormsModule} from '@angular/forms';
+import { LimitValueDirective } from './limit-value.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherFormComponent
+    WeatherFormComponent,
+    LimitValueDirective
   ],
   imports: [
     BrowserModule,
@@ -21,8 +23,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule  ],
   providers: [],
   bootstrap: [AppComponent]
 })

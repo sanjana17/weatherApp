@@ -1,6 +1,9 @@
 <form [formGroup]="myForm">
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="zipcode" name="zipcode" formControlName="zipcode">
+    <input matInput placeholder="zipcode" name="zipcode" formControlName="zipcode" >
+    <mat-error *ngIf="myForm.get('zipcode').hasError('pattern')">zipcode has invalid characters only numbers</mat-error>
+    <mat-error *ngIf="myForm.get('zipcode').hasError('zip')">zipcode should contains only 5 characters</mat-error>
   </mat-form-field>
+
   <button mat-raised-button color="primary" (click)="submitForm(myForm.value)" [disabled]="!myForm.valid">submit</button>
 </form>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-weather-form',
@@ -7,16 +7,14 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./weather-form.component.css']
 })
 export class WeatherFormComponent implements OnInit {
-
-  constructor() { }
-
   myForm: FormGroup;
 
 
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.myForm = new FormGroup({
-      zipcode: new FormControl('', Validators.compose([
+    this.myForm = this.formBuilder.group({
+      zipcode: this.formBuilder.control('', Validators.compose([
         Validators.pattern('^[0-9]*$'),
         Validators.required,
         this.zipValidator
