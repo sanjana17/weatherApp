@@ -1,0 +1,6 @@
+<form [formGroup]="myForm">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="zipcode" name="zipcode" formControlName="zipcode">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="submitForm(myForm.value)" [disabled]="!myForm.valid">submit</button>
+</form>
