@@ -1,0 +1,7 @@
+{
+  "name": "Weather Application",
+  "image": "https://i2.wp.com/www.bigcountryhomepage.com/wp-content/uploads/sites/56/2019/10/Weather-v2-1.jpg?resize=2560%2C1440&ssl=1",
+  "type": ["angular", "Javascript"],
+  "description": "This website is which is retreiving weather details for a particular zipcode",
+  "projectLink": ""
+}
